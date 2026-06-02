@@ -3,467 +3,338 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>מארז חזרה לבגרות באזרחות — יחידת ההגבר (5 יח"ל)</title>
+<title>מארז חזרה לבגרות באזרחות — הגבר: רווחה + דת חברה ומדינה</title>
 <style>
   :root{
-    --e1:#00796b; --e1bg:#e0f2f1;
-    --e2:#6a1b9a; --e2bg:#f3e5f8;
-    --e3:#e65100; --e3bg:#fff0e2;
+    --e1:#00796b; --e1bg:#e0f2f1;          /* welfare */
+    --e2:#6a1b9a; --e2bg:#f3e5f8;          /* religion-state */
     --ink:#1f2733; --muted:#5b6573; --line:#dfe4ea; --bg:#f6f8fb;
     --tip:#1565c0; --tipbg:#e8f1fb;
   }
   *{box-sizing:border-box}
-  body{margin:0;font-family:"Segoe UI","Arial Hebrew",Arial,sans-serif;background:var(--bg);
-    color:var(--ink);line-height:1.7;font-size:18px}
-  header{background:linear-gradient(135deg,#00695c,#00897b);color:#fff;padding:30px 18px 26px;text-align:center}
-  header h1{margin:0 0 6px;font-size:1.7rem}
-  header .sub{opacity:.93;font-size:1.02rem}
-  .badge{display:inline-block;background:#ffd166;color:#5a3d00;font-weight:700;border-radius:20px;
-    padding:5px 16px;margin-top:12px;font-size:.95rem}
-  main{max-width:880px;margin:0 auto;padding:18px 16px 70px}
-  nav{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:18px 0;
-    box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  body{margin:0;font-family:"Segoe UI","Arial Hebrew",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:18px}
+  header{background:linear-gradient(135deg,#4a148c,#00695c);color:#fff;padding:30px 18px 26px;text-align:center}
+  header h1{margin:0 0 6px;font-size:1.65rem}
+  header .sub{opacity:.93;font-size:1rem}
+  .badge{display:inline-block;background:#ffd166;color:#5a3d00;font-weight:700;border-radius:20px;padding:5px 16px;margin-top:12px;font-size:.95rem}
+  main{max-width:900px;margin:0 auto;padding:18px 16px 70px}
+  .callout{background:#fff8e1;border:1px solid #ffe082;border-radius:12px;padding:12px 16px;margin:14px 0}
+  nav{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
   nav b{display:block;margin-bottom:8px;color:var(--muted);font-size:.9rem}
-  nav a{display:inline-block;margin:4px 4px;padding:7px 13px;border-radius:9px;text-decoration:none;
-    font-weight:600;font-size:.95rem}
-  nav .n1{background:var(--e1bg);color:var(--e1)} nav .n2{background:var(--e2bg);color:var(--e2)}
-  nav .n3{background:var(--e3bg);color:var(--e3)} nav .nx{background:var(--tipbg);color:var(--tip)}
-  section{background:#fff;border-radius:16px;padding:20px 20px 8px;margin:20px 0;border:1px solid var(--line);
-    box-shadow:0 1px 4px rgba(0,0,0,.05)}
+  nav a{display:inline-block;margin:4px;padding:7px 13px;border-radius:9px;text-decoration:none;font-weight:600;font-size:.92rem}
+  nav .n1{background:var(--e1bg);color:var(--e1)} nav .n2{background:var(--e2bg);color:var(--e2)} nav .nx{background:var(--tipbg);color:var(--tip)}
+  section{background:#fff;border-radius:16px;padding:20px 20px 8px;margin:20px 0;border:1px solid var(--line);box-shadow:0 1px 4px rgba(0,0,0,.05)}
   .ch{border-top:6px solid}
-  #ec1{border-color:var(--e1)} #ec2{border-color:var(--e2)} #ec3{border-color:var(--e3)}
+  #ec1{border-color:var(--e1)} #ec2{border-color:var(--e2)}
   h2{font-size:1.4rem;margin:.2em 0 .5em;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  #ec1 h2{color:var(--e1)} #ec2 h2{color:var(--e2)} #ec3 h2{color:var(--e3)}
-  h3{font-size:1.15rem;margin:1.1em 0 .3em;border-bottom:2px dashed var(--line);padding-bottom:4px}
-  h4{font-size:1.06rem;margin:1em 0 .25em;color:#0d3b66}
-  .chip{font-size:.78rem;font-weight:700;border-radius:20px;padding:3px 11px;color:#fff}
-  #ec1 .chip{background:var(--e1)} #ec2 .chip{background:var(--e2)} #ec3 .chip{background:var(--e3)}
+  #ec1 h2{color:var(--e1)} #ec2 h2{color:var(--e2)}
+  h3{font-size:1.16rem;margin:1.2em 0 .3em;border-bottom:2px dashed var(--line);padding-bottom:4px}
+  .shaar{background:var(--e2bg);color:var(--e2);border-radius:8px;padding:6px 12px;margin:1.3em 0 .4em;font-weight:700;font-size:1.05rem}
+  h4{font-size:1.04rem;margin:.9em 0 .2em;color:#0d3b66}
+  .chip{font-size:.76rem;font-weight:700;border-radius:20px;padding:3px 11px;color:#fff}
+  #ec1 .chip{background:var(--e1)} #ec2 .chip{background:var(--e2)}
   ul{margin:.3em 0 .8em;padding-inline-start:22px} li{margin:.28em 0}
-  .key{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:3px 9px;display:inline-block;margin:2px 0}
-  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.95rem}
-  th,td{border:1px solid var(--line);padding:8px 10px;text-align:right;vertical-align:top}
+  .key{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:2px 8px;display:inline-block}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.93rem}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:right;vertical-align:top}
   th{background:#f0f4f8}
-  .mnem{background:#fff70014;background:#fffbe6;border:1px solid #ffe082;border-radius:12px;padding:12px 16px;margin:12px 0}
+  .mnem{background:#fffbe6;border:1px solid #ffe082;border-radius:12px;padding:11px 15px;margin:12px 0}
   .mnem b{color:#8a6d00}
   .fig{background:#fbfcfe;border:1px solid var(--line);border-radius:12px;padding:14px;margin:14px 0;text-align:center}
-  .fig figcaption{color:var(--muted);font-size:.9rem;margin-top:6px}
+  .fig figcaption{color:var(--muted);font-size:.88rem;margin-top:6px}
   details{background:#fcfdff;border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0 14px;overflow:hidden}
-  details[open]{box-shadow:0 1px 6px rgba(0,0,0,.06)}
   summary{cursor:pointer;font-weight:700;padding:13px 4px;list-style:none;display:flex;gap:8px;align-items:flex-start}
   summary::-webkit-details-marker{display:none}
-  summary::before{content:"שאלה";font-size:.72rem;background:#eef2f7;color:var(--muted);
-    border-radius:6px;padding:3px 7px;flex:none;margin-top:2px}
+  summary::before{content:"שאלה";font-size:.72rem;background:#eef2f7;color:var(--muted);border-radius:6px;padding:3px 7px;flex:none;margin-top:2px}
   .ans{border-top:1px dashed var(--line);padding:10px 2px 14px;margin-top:4px}
   .ans b{color:#0d3b66}
   .quick{background:#e0f2f1;border-inline-start:4px solid #00796b;border-radius:6px;padding:7px 11px;margin:0 0 10px;font-size:.95rem}
   .quick b{color:#00695c}
+  details.more{background:#f1f7ff;border-color:#cfe0f5}
+  details.more summary::before{content:"💡 הרחבה";background:#dceafe;color:#1565c0}
+  details.more .ans{border-top-color:#cfe0f5}
   .freq{font-size:.74rem;font-weight:700;border-radius:6px;padding:2px 8px;margin-inline-start:auto;flex:none}
   .hi{background:#ffe0e0;color:#c0392b} .mid{background:#fff3cd;color:#8a6d00}
-  .callout{background:#fff8e1;border:1px solid #ffe082;border-radius:12px;padding:12px 16px;margin:14px 0}
+  .out{background:#fdecea;border:1px solid #ef9a9a;border-radius:10px;padding:8px 13px;margin:10px 0;font-size:.92rem;color:#7a2d24}
+  .controls{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.05);text-align:center;position:sticky;top:0;z-index:20}
+  .ctl-label{font-weight:700;color:var(--muted);font-size:.9rem;margin-inline-end:6px}
+  .seg{display:inline-flex;gap:6px;flex-wrap:wrap;justify-content:center}
+  .seg button{font-family:inherit;font-size:.93rem;font-weight:700;cursor:pointer;border:2px solid var(--tip);background:#fff;color:var(--tip);border-radius:10px;padding:7px 15px}
+  .seg button[aria-pressed="true"]{background:var(--tip);color:#fff}
+  .saved-note{font-size:.8rem;color:#2e7d32;margin-top:6px;min-height:1em}
   .verbs td:first-child{font-weight:700;white-space:nowrap}
-  /* elective chooser */
-  .elective{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:18px 0;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);text-align:center}
-  .elective b{display:block;margin-bottom:10px;color:var(--muted);font-size:.92rem}
-  .seg{display:inline-flex;flex-wrap:wrap;gap:6px;justify-content:center}
-  .seg button{font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;border:2px solid var(--e3);
-    background:#fff;color:var(--e3);border-radius:10px;padding:8px 16px;transition:.15s}
-  .seg button[aria-pressed="true"]{background:var(--e3);color:#fff}
-  .seg button:hover{filter:brightness(.97)}
-  .saved-note{font-size:.82rem;color:var(--muted);margin-top:8px;min-height:1em}
-  .hidden-elective{display:none !important}
-  /* clickable info expansions */
-  details.more{background:#f1f7ff;border:1px solid #cfe0f5;border-radius:10px;margin:8px 0 12px;padding:0 14px}
-  details.more summary{color:#1565c0;padding:11px 4px}
-  details.more summary::before{content:"💡 הרחבה";background:#dceafe;color:#1565c0}
-  details.more[open]{box-shadow:0 1px 5px rgba(21,101,192,.12)}
-  details.more .ans{border-top:1px dashed #cfe0f5}
-  /* controls bar */
-  .controls{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:18px 0;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);position:sticky;top:0;z-index:20}
-  .ctl-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin:6px 0}
-  .ctl-label{font-weight:700;color:var(--muted);font-size:.92rem}
-  .seg-mode button{border-color:var(--tip);color:var(--tip)}
-  .seg-mode button[aria-pressed="true"]{background:var(--tip);color:#fff}
-  .saved-note{font-size:.82rem;color:#2e7d32;text-align:center;margin-top:6px;min-height:1.1em}
-  /* detail modes */
-  details.more{display:none}                      /* expansions: full only */
-  body.mode-full details.more{display:block}
-  body.mode-quick details:not(.more){display:none}/* Q&A: hidden in quick */
-  body.mode-quick .qa-h{display:none}
-  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:26px 16px 50px}
+  footer{text-align:center;color:var(--muted);font-size:.84rem;padding:26px 16px 50px}
   .top{display:block;text-align:center;margin:8px 0;color:var(--muted);text-decoration:none;font-size:.85rem}
   svg text{font-family:"Segoe UI","Arial Hebrew",Arial,sans-serif}
+  /* detail modes */
+  details.more{display:none}
+  body.mode-full details.more{display:block}
+  body.mode-quick details:not(.more){display:none}
+  body.mode-quick .qa-h{display:none}
 </style>
 </head>
-<body>
+<body class="mode-full">
 <header>
-  <h1>מארז חזרה לבגרות באזרחות</h1>
-  <div class="sub">יחידת ההגבר (5 יח"ל) · מדיניות חברתית-כלכלית · דת-חברה-מדינה · החברה הערבית והדרוזית</div>
+  <h1>מארז חזרה לבגרות באזרחות — יחידת ההגבר</h1>
+  <div class="sub">שאלון 034371 (מדיניות חברתית-כלכלית) · שאלון 034372 (דת, חברה ומדינה)</div>
   <div class="badge">📅 הבחינה: יום חמישי, כ"ו סיוון, 11 ביוני 2026</div>
 </header>
 
 <main>
   <div class="callout">
-    <b>מבנה בחינת ההגבר החיצונית (לפי השאלונים הרשמיים 2021–2025):</b>
-    <table>
-      <tr><th>שאלון</th><th>נושא</th><th>מבנה</th><th>משקל*</th></tr>
-      <tr><td><b>034371</b></td><td>מדיניות חברתית-כלכלית (רווחה, מיסוי, גלובליזציה)</td><td>3 פרקים · 100 נק' · ~1:45 ש'</td><td>~30%</td></tr>
-      <tr><td><b>034372</b></td><td>דת-חברה-מדינה <b>+</b> החברה הערבית והדרוזית</td><td>2 פרקים · 100 נק' · ~2:45 ש'</td><td>~70%</td></tr>
-    </table>
-    <span style="font-size:.88rem;color:var(--muted)">*חלוקת המשקל ורכיבי ההערכה (מיזם/הערכה חלופית) משתנים בין מסלולים — <b>ודאו מול המורה</b> את ההרכב המדויק שלכם. החומר כאן מכסה את שני השאלונים.</span>
-  </div>
-
-  <div class="callout" style="background:#eef4fb;border-color:#bcd6f0">
-    <b>📖 איך ללמוד מהדף:</b> קראו תחילה את ה<b>הסברים המלאים</b> בכל נושא (משפטים שלמים שמסבירים כל מושג).
-    השורה ה<b style="color:#00695c">תכולה ("⚡ תזכורת מהירה")</b> וראשי-התיבות הם <b>תזכורות לחזרה</b> אחרי שהבנתם.
-    לחיצה על <b>שאלה</b> פותחת תשובה מלאה. שימו לב לפועל בשאלה: <span class="key">הציגו</span>=עובדה · <span class="key">הסבירו</span>=נימוק+פיתוח · <span class="key">בססו על הקטע</span>=הפניה למקור.
+    <b>היקף הבחינה לפי המיקוד הרשמי (תשפ"ו 2026):</b>
+    <ul style="margin:8px 0 0">
+      <li><b>שאלון 034371 — מדיניות חברתית-כלכלית (≈30%):</b> ספר "אתגר הרווחה". <b>נלמדים</b> פרקים 1,2,3,4,6,7,8.
+        <span style="color:#c0392b">ירדו מהחומר: פרק 5 (המדיניות התקציבית) ופרק 9 (ישראל כמדינת רווחה).</span></li>
+      <li><b>שאלון 034372 — דת, חברה ומדינה (≈70%):</b> ספר "דת חברה ומדינה בישראל" — <b>כל 17 הפרקים</b> (מבלי יוצא מן הכלל). <i>(נושא הבחירה: דת — לא ערבים ודרוזים.)</i></li>
+    </ul>
+    <span style="font-size:.85rem;color:var(--muted)">מבוסס על המיקוד הרשמי תשפ"ו, ספר הלימוד, ושאלוני הבגרות 2021–2025. אינו תחליף לספר ולמורה.</span>
   </div>
 
   <div class="controls">
-    <div class="ctl-row">
-      <span class="ctl-label">📏 רמת פירוט:</span>
-      <div class="seg seg-mode">
-        <button data-mode="quick">סקירה מהירה</button>
-        <button data-mode="medium">בינוני</button>
-        <button data-mode="full">מלא</button>
-      </div>
-    </div>
-    <div class="ctl-row">
-      <span class="ctl-label">🎯 נושא הבחירה (034372):</span>
-      <div class="seg seg-elective">
-        <button data-choice="dat">דת, חברה ומדינה</button>
-        <button data-choice="arab">ערבים ודרוזים</button>
-        <button data-choice="both">שניהם</button>
-      </div>
-    </div>
-    <div class="saved-note" id="savedNote">הבחירות נשמרות אוטומטית במכשיר שלך</div>
+    <span class="ctl-label">📏 רמת פירוט:</span>
+    <span class="seg seg-mode">
+      <button data-mode="quick">סקירה מהירה</button>
+      <button data-mode="medium">בינוני</button>
+      <button data-mode="full">מלא</button>
+    </span>
+    <div class="saved-note" id="savedNote">הבחירה נשמרת אוטומטית · "מלא" כולל את ההרחבות 💡</div>
   </div>
 
   <nav>
     <b>ניווט מהיר</b>
-    <a class="n1" href="#ec1">שאלון 034371 · רווחה וכלכלה</a>
-    <a class="n2" href="#ec2">דת, חברה ומדינה</a>
-    <a class="n3" href="#ec3">החברה הערבית והדרוזית</a>
+    <a class="n1" href="#ec1">034371 · רווחה וכלכלה</a>
+    <a class="n2" href="#ec2">034372 · דת, חברה ומדינה</a>
     <a class="nx" href="#exam">טכניקת מענה</a>
-    <a class="nx" href="#check">צ׳ק־ליסט אחרון</a>
+    <a class="nx" href="#check">צ׳ק־ליסט</a>
   </nav>
 
-  <!-- ===================== 034371 ===================== -->
+  <!-- =================== 034371 WELFARE =================== -->
   <section id="ec1" class="ch">
     <h2>💰 שאלון 034371 — מדיניות חברתית-כלכלית</h2>
 
     <h3>מדינת הרווחה <span class="chip">מושג יסוד</span></h3>
-    <ul>
-      <li><b>מדינת רווחה</b> — מדינה שלוקחת על עצמה <b>אחריות לרווחת אזרחיה</b>: היא מספקת שירותים חברתיים (חינוך, בריאות, ביטחון סוציאלי) ופועלת <b>לצמצום פערים</b> ולהבטחת רמת חיים בסיסית לכולם.</li>
-    </ul>
+    <ul><li><b>מדינת רווחה</b> — מדינה הלוקחת אחריות לרווחת אזרחיה: מספקת שירותים חברתיים (חינוך, בריאות, ביטחון סוציאלי) ופועלת <b>לצמצום פערים</b> ולהבטחת רמת חיים בסיסית.</li></ul>
 
-    <h3>שתי גישות כלכליות — הציר המרכזי של כל הפרק <span class="chip">חוזר מאוד</span></h3>
+    <h3>שתי הגישות — הציר המרכזי <span class="chip">חוזר מאוד</span></h3>
     <figure class="fig">
       <svg viewBox="0 0 720 200" width="100%" style="max-width:700px" role="img" aria-label="ציר גישות כלכליות">
-        <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1565c0"/><stop offset="1" stop-color="#00796b"/></linearGradient>
-          <marker id="aE" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#555"/></marker></defs>
+        <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1565c0"/><stop offset="1" stop-color="#00796b"/></linearGradient></defs>
         <rect x="60" y="92" width="600" height="14" rx="7" fill="url(#g1)"/>
         <circle cx="60" cy="99" r="9" fill="#1565c0"/><circle cx="660" cy="99" r="9" fill="#00796b"/>
         <g text-anchor="middle">
           <text x="135" y="55" font-size="15" font-weight="700" fill="#1565c0">גישה ליברלית</text>
-          <text x="135" y="74" font-size="12" fill="#5b6573">(שוק חופשי)</text>
-          <text x="585" y="55" font-size="15" font-weight="700" fill="#00796b">גישה סוציאל-דמוקרטית</text>
-          <text x="585" y="74" font-size="12" fill="#5b6573">(מדינת רווחה)</text>
+          <text x="135" y="74" font-size="12" fill="#5b6573">ערך-על: חירות</text>
+          <text x="585" y="55" font-size="15" font-weight="700" fill="#00796b">סוציאל-דמוקרטית</text>
+          <text x="585" y="74" font-size="12" fill="#5b6573">ערך-על: שוויון</text>
         </g>
         <g font-size="12" text-anchor="middle" fill="#37474f">
-          <text x="135" y="135">מעורבות ממשלה מינימלית</text>
-          <text x="135" y="153">מסים נמוכים · הפרטה</text>
-          <text x="135" y="171">פערים = לגיטימיים</text>
-          <text x="585" y="135">מעורבות ממשלה רחבה</text>
-          <text x="585" y="153">מסים גבוהים · קצבאות</text>
-          <text x="585" y="171">צמצום פערים</text>
+          <text x="135" y="135">מעורבות ממשלה מינ׳</text><text x="135" y="153">מסים נמוכים · הפרטה</text><text x="135" y="171">פערים לגיטימיים</text>
+          <text x="585" y="135">מעורבות ממשלה רחבה</text><text x="585" y="153">מסים גבוהים · קצבאות</text><text x="585" y="171">צמצום פערים</text>
         </g>
+        <text x="360" y="30" text-anchor="middle" font-size="12.5" fill="#888">רצף — לא דיכוטומיה; מדינות משלבות</text>
       </svg>
-      <figcaption>כל שאלה כמעט תדרוש לזהות לאיזו גישה משתייכת עמדה/קטע — וזה הציר</figcaption>
+      <figcaption>ההבדל משקף <b>התנגשות ערכים: חירות מול שוויון</b>. כמעט כל שאלה תדרוש לזהות לאיזו גישה שייכת עמדה/קטע.</figcaption>
     </figure>
-    <p style="margin:.3em 0 .7em">ה<b>סילבוס הרשמי</b> ממסגר זאת כ<b>התנגשות בין שני ערכים: חירות</b> (הגישה הליברלית) מול <b>שוויון</b> (הגישה הסוציאל-דמוקרטית). חשוב: קיים <b>רצף</b> בין הגישות — לא דיכוטומיה — ובפועל מדינות משלבות ביניהן.</p>
-    <details class="more"><summary>דוגמאות למדינות — ואיפה ישראל על הציר</summary>
-      <div class="ans"><b>ליברלית מובהקת:</b> ארה"ב — מסים נמוכים, מערכת רווחה מצומצמת.
-      <b>סוציאל-דמוקרטית מובהקת:</b> מדינות סקנדינביה (שוודיה, דנמרק) — מסים גבוהים ורווחה נרחבת.
-      <b>ישראל:</b> דגם <b>מעורב</b> שנע עם השנים <b>לכיוון השוק החופשי</b> (הפרטות, צמצום קצבאות), לצד מערכת רווחה משמעותית.</div>
-    </details>
 
-    <h3>הכלים של מדיניות הרווחה</h3>
+    <h3>כלי מדיניות הרווחה <span class="chip">פרקים 4, 6</span></h3>
     <ul>
-      <li><b>מיסוי:</b> <b>מס ישיר</b> (מס הכנסה) הוא לרוב <b>פרוגרסיבי</b> — מי שמרוויח יותר משלם אחוז גבוה יותר → <b>מצמצם פערים</b>. <b>מס עקיף</b> (מע"מ) הוא <b>רגרסיבי</b> — פוגע יחסית יותר בחלשים.</li>
-      <li><b>תשלומי העברה (קצבאות):</b> העברת כסף מהמדינה לאזרחים — קצבת זקנה, ילדים, אבטלה, הבטחת הכנסה, נכות.</li>
-      <li><b>שירותים חברתיים:</b> חינוך, בריאות ודיור הניתנים לכולם.</li>
-      <li><b>חקיקה סוציאלית:</b> שכר מינימום, חוקי הגנה על עובדים.</li>
+      <li><b>מיסוי:</b> <b>מס ישיר</b> (מס הכנסה) — לרוב <b>פרוגרסיבי</b> (מי שמרוויח יותר משלם אחוז גבוה יותר) → מצמצם פערים. <b>מס עקיף</b> (מע"מ) — <b>רגרסיבי</b>, פוגע יחסית יותר בחלשים.</li>
+      <li><b>תשלומי העברה (קצבאות):</b> זקנה, ילדים, אבטלה, הבטחת הכנסה, נכות.</li>
+      <li><b>שירותים חברתיים:</b> חינוך, בריאות, דיור. <b>חקיקה סוציאלית:</b> שכר מינימום.</li>
+      <li><b>הביטחון הסוציאלי:</b> "רשת ביטחון" שמטרתה למנוע נפילה מתחת לרמת חיים בסיסית.</li>
     </ul>
-    <div class="mnem"><b>כלי הרווחה — "מת"ש":</b> <b>מ</b>יסוי · <b>ת</b>שלומי העברה (קצבאות) · <b>ש</b>ירותים חברתיים וחקיקה.</div>
+    <div class="mnem"><b>כלי הרווחה — "מת"ש":</b> <b>מ</b>יסוי · <b>ת</b>שלומי העברה · <b>ש</b>ירותים חברתיים.</div>
 
     <h3>עוני ואי-שוויון</h3>
     <ul>
-      <li><b>עוני יחסי</b> — נמדד ביחס לרמת החיים בחברה (קו העוני = אחוז מ<b>חציון</b> ההכנסה). זה המדד הנהוג בישראל.</li>
-      <li><b>אי-שוויון</b> — פערים בחלוקת ההכנסות בין קבוצות. תשלומי ההעברה והמיסים הישירים <b>מורידים את שיעור העוני</b>.</li>
+      <li><b>עוני יחסי</b> — נמדד ביחס לחברה (קו עוני = אחוז מ<b>חציון</b> ההכנסה). זה המדד בישראל. <b>עומק העוני</b> = כמה מתחת לקו.</li>
+      <li>תשלומי ההעברה והמיסים הישירים <b>מורידים את שיעור העוני</b> ואת אי-השוויון.</li>
     </ul>
-    <details class="more"><summary>"מדד ג'יני" + ההבדל בין עוני יחסי למוחלט</summary>
-      <div class="ans"><b>מדד ג'יני</b> — מספר בין 0 ל-1 שמודד אי-שוויון בחלוקת ההכנסות: ככל שקרוב ל-1, אי-השוויון גדול יותר.
-      <b>עוני מוחלט</b> = אי-יכולת לספק צרכים בסיסיים (מזון, קורת גג). <b>עוני יחסי</b> = הכנסה נמוכה משמעותית מרוב החברה (גם אם הצרכים הבסיסיים מסופקים). ישראל מודדת עוני <b>יחסי</b>.</div>
-    </details>
 
-    <h3>גלובליזציה <span class="chip">פרק שני בשאלון</span></h3>
-    <details class="more"><summary>איך הגלובליזציה "מאיימת" על מדינת הרווחה?</summary>
-      <div class="ans">כשהון וחברות עוברים בקלות בין מדינות, מדינות מתחרות על משיכת השקעות בכך שהן <b>מורידות מסים ומקטינות הגנות סוציאליות</b> ("מרוץ לתחתית") — וכך נחלשת היכולת לממן את מדינת הרווחה.</div>
-    </details>
+    <h3>הפרטה <span class="chip">פרק 7</span></h3>
+    <ul><li><b>הפרטה</b> — העברת בעלות/שירותים מהמדינה לידיים פרטיות. <b>בעד:</b> יעילות ותחרות. <b>נגד:</b> פגיעה בשוויון ובאיכות השירות לחלשים.</li></ul>
+
+    <h3>גלובליזציה <span class="chip">פרק 8</span></h3>
     <details class="more"><summary>ארבעת התחומים שבהם בוחנים גלובליזציה (לפי הסילבוס)</summary>
-      <div class="ans"><b>א. חברה וכלכלה</b> (הגירה ומהגרי עבודה) · <b>ב. תרבות</b> · <b>ג. מוסדות ומשפט בין-לאומיים</b> · <b>ד. מעמד מדינת הלאום</b> (היחלשות מול התחזקות). שאלות נוטות להתמקד ב<b>תחום אחד</b>.</div>
-    </details>
-    <figure class="fig">
-      <svg viewBox="0 0 700 180" width="100%" style="max-width:680px" role="img" aria-label="גלובליזציה יתרונות וחסרונות">
-        <rect x="30" y="20" width="310" height="140" rx="12" fill="#e0f2f1" stroke="#4db6ac"/>
-        <text x="185" y="45" text-anchor="middle" font-size="15" font-weight="700" fill="#00695c">יתרונות ✓</text>
-        <g font-size="12.5" text-anchor="middle" fill="#234"><text x="185" y="72">צמיחה כלכלית וסחר בין-לאומי</text>
-          <text x="185" y="95">השקעות וטכנולוגיה</text><text x="185" y="118">מגוון מוצרים ומחירים נמוכים</text><text x="185" y="141">חשיפה תרבותית</text></g>
-        <rect x="360" y="20" width="310" height="140" rx="12" fill="#fdecea" stroke="#ef9a9a"/>
-        <text x="515" y="45" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">חסרונות ✗</text>
-        <g font-size="12.5" text-anchor="middle" fill="#234"><text x="515" y="72">הגדלת פערים בין ובתוך מדינות</text>
-          <text x="515" y="95">פגיעה בתעשייה ובעובדים מקומיים</text><text x="515" y="118">פגיעה בריבונות ובמדינת הרווחה</text><text x="515" y="141">האחדה ("מחיקת" תרבות מקומית)</text></g>
-      </svg>
-    </figure>
+      <div class="ans"><b>א. חברה וכלכלה</b> (הגירה ומהגרי עבודה) · <b>ב. תרבות</b> · <b>ג. מוסדות ומשפט בין-לאומיים</b> · <b>ד. מעמד מדינת הלאום</b> (היחלשות מול התחזקות).</div></details>
+    <ul>
+      <li><b>יתרונות:</b> צמיחה, סחר, השקעות, טכנולוגיה, מחירים נמוכים.</li>
+      <li><b>חסרונות:</b> הגדלת פערים, פגיעה בתעשייה מקומית, ו<b>איום על מדינת הרווחה</b> ("מרוץ לתחתית" — מדינות מורידות מסים והגנות כדי למשוך הון).</li>
+    </ul>
+    <div class="out">⛔ <b>לא בבחינה תשפ"ו:</b> פרק 5 (המדיניות התקציבית) · פרק 9 (ישראל כמדינת רווחה יהודית ודמוקרטית).</div>
 
-    <h3 class="qa-h">שאלות סבירות + תשובות לדוגמה</h3>
-    <details><summary>הסבירו את ההבדל בין הגישה הליברלית לגישה הסוציאל-דמוקרטית במדיניות כלכלית-חברתית. <span class="freq hi">חוזרת מאוד</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> ליברלית = מדינה לא מתערבת, מסים נמוכים, פערים לגיטימיים; סוציאל-דמוקרטית = מדינה מעורבת, מסים גבוהים, צמצום פערים.</p><b>תשובה:</b>
-      <br><b>הגישה הליברלית (שוק חופשי):</b> דוגלת ב<b>מעורבות ממשלתית מינימלית</b> בכלכלה. השוק החופשי יקבע מחירים ושכר, המסים נמוכים, ומעודדים <b>הפרטה</b>. פערים כלכליים נתפסים כתוצאה לגיטימית של תחרות ויוזמה.
-      <br><b>הגישה הסוציאל-דמוקרטית (מדינת רווחה):</b> דוגלת ב<b>מעורבות ממשלתית רחבה</b> כדי <b>לצמצם פערים</b> ולהבטיח רווחה לכול. המדינה גובה <b>מסים גבוהים (פרוגרסיביים)</b>, מעבירה <b>קצבאות</b> ומספקת שירותים חברתיים נרחבים.</div>
-    </details>
-    <details><summary>הציגו שני כלים שבהם משתמשת מדינת הרווחה לצמצום פערים, והסבירו כיצד אחד מהם מצמצם פערים. <span class="freq hi">חוזרת מאוד</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> מיסוי פרוגרסיבי + תשלומי העברה (קצבאות) → לוקחים יותר מהחזקים ומעבירים לחלשים.</p><b>תשובה:</b>
-      <br><b>כלי 1 — מיסוי פרוגרסיבי:</b> מס הכנסה שבו בעלי הכנסה גבוהה משלמים אחוז גבוה יותר.
-      <br><b>כלי 2 — תשלומי העברה (קצבאות):</b> העברת כספים לאוכלוסיות חלשות (קצבת זקנה, אבטלה, הבטחת הכנסה).
-      <br><b>כיצד מצמצם פערים:</b> המדינה <b>גובה מס גבוה יותר מהעשירים</b> ומשתמשת בכסף כדי <b>להעביר קצבאות לחלשים</b> — וכך מקטינה את הפער בהכנסה הפנויה בין הקבוצות ומורידה את שיעור העוני.</div>
-    </details>
-    <details><summary>הציגו יתרון אחד וחיסרון אחד של הגלובליזציה הכלכלית. <span class="freq mid">חוזרת</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> יתרון = צמיחה/סחר/טכנולוגיה; חיסרון = הגדלת פערים ופגיעה בתעשייה ובמדינת הרווחה המקומית.</p><b>תשובה:</b>
-      <br><b>יתרון:</b> פתיחת השווקים מגבירה <b>סחר, השקעות וצמיחה כלכלית</b>, ומאפשרת גישה לטכנולוגיה ולמוצרים זולים יותר.
-      <br><b>חיסרון:</b> הגלובליזציה <b>מגדילה פערים</b> — תעשיות מקומיות נפגעות מתחרות זרה, והתחרות הבין-לאומית לוחצת מדינות <b>להוריד מסים והגנות סוציאליות</b>, ובכך מחלישה את מדינת הרווחה.</div>
-    </details>
-    <a class="top" href="#">↑ חזרה לראש העמוד</a>
+    <h3 class="qa-h">שאלות סבירות + תשובות</h3>
+    <details><summary>הסבירו את ההבדל בין הגישה הליברלית לסוציאל-דמוקרטית. <span class="freq hi">חוזרת מאוד</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> ליברלית = חירות, מדינה לא מתערבת, מסים נמוכים, פערים לגיטימיים; סוציאל-דמוקרטית = שוויון, מדינה מעורבת, מסים גבוהים, צמצום פערים.</p>
+      <b>הגישה הליברלית</b> שמה במרכז את ערך ה<b>חירות</b>: מעורבות ממשלתית מינימלית, שוק חופשי, מסים נמוכים והפרטה; פערים נתפסים כתוצאה לגיטימית של תחרות. <b>הגישה הסוציאל-דמוקרטית</b> שמה במרכז את ה<b>שוויון</b>: מעורבות ממשלתית רחבה לצמצום פערים, מסים פרוגרסיביים גבוהים, קצבאות ושירותים חברתיים נרחבים. בפועל יש <b>רצף</b> ביניהן ומדינות משלבות.</div></details>
+    <details><summary>הציגו שני כלים לצמצום פערים והסבירו כיצד אחד מהם פועל. <span class="freq hi">חוזרת מאוד</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> מיסוי פרוגרסיבי + תשלומי העברה → גובים מהחזקים, מעבירים לחלשים.</p>
+      <b>1. מיסוי פרוגרסיבי</b> ו<b>2. תשלומי העברה (קצבאות).</b> כיצד: המדינה <b>גובה מס גבוה יותר מבעלי ההכנסה הגבוהה</b> ומשתמשת בכסף כדי <b>להעביר קצבאות לחלשים</b> — וכך מקטינה את הפער בהכנסה הפנויה ומורידה את שיעור העוני.</div></details>
+    <details><summary>הציגו יתרון וחיסרון של הגלובליזציה הכלכלית. <span class="freq mid">חוזרת</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> יתרון = צמיחה/סחר/טכנולוגיה; חיסרון = פערים + איום על מדינת הרווחה.</p>
+      <b>יתרון:</b> פתיחת שווקים מגבירה סחר, השקעות וצמיחה. <b>חיסרון:</b> מגדילה פערים ולוחצת מדינות להוריד מסים והגנות סוציאליות — ובכך מחלישה את מדינת הרווחה.</div></details>
+    <a class="top" href="#">↑ לראש העמוד</a>
   </section>
 
-  <!-- ===================== דת חברה ומדינה ===================== -->
+  <!-- =================== 034372 RELIGION-STATE =================== -->
   <section id="ec2" class="ch">
-    <h2>🕊️ שאלון 034372 · פרק א — דת, חברה ומדינה</h2>
+    <h2>🕊️ שאלון 034372 — דת, חברה ומדינה</h2>
+    <p style="color:var(--muted);font-size:.95rem">מאורגן לפי חמשת השערים של הספר. <b>כל הפרקים בבחינה.</b></p>
 
-    <h3>דגמים ליחסי דת ומדינה <span class="chip">לב הפרק</span></h3>
+    <div class="shaar">שער א — דת ומדינה: הילכו שתיהן יחדיו?</div>
+
+    <h3>דגמי יחסי דת ומדינה <span class="chip">לב הפרק</span></h3>
     <figure class="fig">
-      <svg viewBox="0 0 720 210" width="100%" style="max-width:700px" role="img" aria-label="דגמים ליחסי דת ומדינה">
-        <rect x="50" y="95" width="620" height="14" rx="7" fill="#ce93d8"/>
-        <circle cx="50" cy="102" r="9" fill="#6a1b9a"/><circle cx="660" cy="102" r="9" fill="#6a1b9a"/>
-        <circle cx="360" cy="102" r="11" fill="#e65100"/>
-        <g text-anchor="middle">
-          <text x="110" y="55" font-size="14.5" font-weight="700" fill="#6a1b9a">הפרדת דת ומדינה</text>
-          <text x="110" y="74" font-size="11.5" fill="#5b6573">מדינה ניטרלית (ארה"ב, צרפת)</text>
-          <text x="360" y="48" font-size="14.5" font-weight="700" fill="#e65100">הדגם הישראלי</text>
-          <text x="360" y="66" font-size="11.5" fill="#5b6573">לא מפריד ולא תאוקרטי —</text>
-          <text x="360" y="82" font-size="11.5" fill="#5b6573">"סטטוס קוו"</text>
-          <text x="610" y="55" font-size="14.5" font-weight="700" fill="#6a1b9a">מדינה תאוקרטית</text>
-          <text x="610" y="74" font-size="11.5" fill="#5b6573">הדת = החוק (איראן)</text>
+      <svg viewBox="0 0 720 130" width="100%" style="max-width:700px" role="img" aria-label="ציר דגמי דת-מדינה">
+        <rect x="40" y="70" width="640" height="12" rx="6" fill="#ce93d8"/>
+        <g text-anchor="middle" font-size="11.5" fill="#4a148c">
+          <text x="70" y="55" font-weight="700">תיאוקרטיה</text><text x="70" y="103" fill="#5b6573">הדת שולטת</text>
+          <text x="220" y="55" font-weight="700">כנסייה רשמית</text><text x="220" y="103" fill="#5b6573">דת אחת מועדפת</text>
+          <text x="370" y="55" font-weight="700">עדות מוכרות</text><text x="370" y="103" fill="#5b6573">← הדגם הישראלי</text>
+          <text x="520" y="55" font-weight="700">הפרדה</text><text x="520" y="103" fill="#5b6573">ניטרליות</text>
+          <text x="650" y="55" font-weight="700">חילוניות אבסולוטית</text><text x="650" y="103" fill="#5b6573">עוינות לדת</text>
         </g>
-        <text x="360" y="150" text-anchor="middle" font-size="12.5" fill="#37474f">ישראל יושבת ב<tspan font-weight="700">אמצע</tspan> — שילוב מורכב של דת ומדינה, בלי הפרדה ובלי שלטון דתי מלא</text>
+        <circle cx="370" cy="76" r="8" fill="#e65100"/>
       </svg>
-      <figcaption>הציר המרכזי: מהפרדה מלאה (משמאל) ועד תאוקרטיה (מימין); ישראל באמצע</figcaption>
+      <figcaption>מהדת השלטת (ימין) ועד עוינות לדת (שמאל). <b>ישראל</b> קרובה לדגם <b>"העדות המוכרות"</b>.</figcaption>
     </figure>
-    <ul>
-      <li><b>הפרדת דת ומדינה:</b> המדינה <b>ניטרלית</b> דתית, אין דת רשמית, הדת היא עניין פרטי (ארה"ב, צרפת).</li>
-      <li><b>מדינה תאוקרטית:</b> הדת <b>שולטת</b> והחוק הדתי הוא חוק המדינה (איראן).</li>
-      <li><b>הדגם הישראלי:</b> ישראל <b>אינה מפרידה</b> דת ומדינה <b>ואינה תאוקרטיה</b> — דגם ביניים מורכב, מבוסס על הסכמות פוליטיות ("סטטוס קוו").</li>
-    </ul>
-    <details class="more"><summary>דוגמה לכל דגם בעולם</summary>
-      <div class="ans"><b>הפרדה:</b> ארה"ב, צרפת. <b>תאוקרטיה:</b> איראן (החוק האסלאמי = חוק המדינה). <b>דת רשמית עם חופש דת:</b> בריטניה (כנסייה אנגליקנית רשמית, אך חופש דת מלא). <b>ישראל:</b> דגם ייחודי — שילוב עמוק של דת ומדינה בחקיקה ובחיים הציבוריים, בלי הפרדה ובלי שלטון דתי מלא.</div>
-    </details>
-    <details class="more"><summary>הטיפולוגיה הרשמית: ניתוח "אופייה הרצוי של המדינה" ב-3 ממדים</summary>
-      <div class="ans">הסילבוס הרשמי מנתח את אופי המדינה לפי <b>שלושה ממדים</b>:
-      <br><b>1. ממד דתי-תרבותי</b> (רצף): <b>מדינה חילונית</b> (הפרדה מלאה) → <b>מסורתית-תרבותית</b> → <b>חקיקה הלכתית חלקית</b> (כאן ממוקמת ישראל) → <b>מדינת הלכה</b>.
-      <br><b>2. ממד לאומי:</b> <b>מדינת לאום יהודית דמוקרטית</b> · יהודית לא-דמוקרטית · <b>מדינה דו-לאומית</b> · <b>מדינת כל אזרחיה</b>.
-      <br><b>3. ממד אזרחי:</b> תפיסה ליברלית-אינדיבידואלית · רפובליקנית · רב-תרבותית.</div>
-    </details>
-
-    <h3>הסטטוס קוו <span class="chip">מושג מפתח</span></h3>
-    <ul>
-      <li><b>מהו:</b> הסכמה לשמר את <b>מצב הדת הקיים</b> במדינה, שמקורה במכתב בן-גוריון (1947). נועד למנוע מלחמת תרבות בין דתיים לחילונים.</li>
-      <li><b>ארבעת התחומים:</b> <b>שבת</b> (יום מנוחה רשמי), <b>כשרות</b> (במוסדות ציבוריים), <b>נישואין וגירושין</b> (דרך הממסד הדתי), <b>חינוך</b> (זרמים נפרדים).</li>
-    </ul>
-    <div class="mnem"><b>הסטטוס קוו — "שכנ"ח":</b> <b>ש</b>בת · <b>כ</b>שרות · <b>נ</b>ישואין וגירושין · <b>ח</b>ינוך. (כמו "שָׁכֵן" + ח')</div>
-    <details class="more"><summary>מאיפה הגיע הסטטוס קוו, ולמה הוא שברירי?</summary>
-      <div class="ans">מקורו ב<b>"מכתב הסטטוס קוו"</b> שכתב בן-גוריון (בשם הסוכנות היהודית) לאגודת ישראל ב-1947, כדי להבטיח את תמיכת הציבור הדתי בהקמת המדינה. הוא <b>אינו חוק</b> אלא הסכמה פוליטית — ולכן <b>שברירי</b> ומתערער שוב ושוב סביב שינויים חברתיים (עסקים ותחבורה בשבת, גיוס בני ישיבות).</div>
-    </details>
-
-    <h3>גישות, חירויות ומתחים</h3>
-    <ul>
-      <li><b>גישה מרחיבה</b> — לחזק ולהרחיב את מקום הדת וההלכה במרחב הציבורי. <b>גישה מצמצמת</b> — לצמצם את מעורבות הדת ולהגביר את ההפרדה.</li>
-      <li><b>חופש דת</b> = הזכות לקיים אורח חיים דתי. <b>חופש מדת</b> = הזכות <b>לא</b> לקיים אורח חיים דתי ולהשתחרר מכפייה דתית.</li>
-      <li><b>המתח המרכזי:</b> בין ערכי המדינה כ<b>יהודית</b> (אופי יהודי, חוקי דת) לבין ערכיה כ<b>דמוקרטית</b> (חופש, שוויון, חופש מדת). סוגיות בולטות: נישואין אזרחיים, תחבורה ומסחר בשבת, גיוס בני ישיבות, כשרות.</li>
-    </ul>
-
-    <h3 class="qa-h">שאלות סבירות + תשובות לדוגמה</h3>
-    <details><summary>הציגו את הדגם הישראלי ליחסי דת ומדינה, והשוו אותו לדגם של הפרדת דת ומדינה. <span class="freq hi">חוזרת מאוד</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> הדגם הישראלי = לא מפריד ולא תאוקרטי, מבוסס סטטוס קוו; בהפרדה — המדינה ניטרלית והדת פרטית.</p><b>תשובה:</b>
-      <br><b>הדגם הישראלי:</b> ישראל <b>אינה מפרידה</b> בין דת למדינה ו<b>אינה מדינה תאוקרטית</b>. יש שילוב בין השניים, המוסדר ב"סטטוס קוו" — לדוגמה, נישואין וגירושין של יהודים מתנהלים דרך הרבנות, שבת היא יום המנוחה הרשמי, ויש פיקוח כשרות במוסדות ציבוריים.
-      <br><b>בדגם של הפרדה (לשם השוואה):</b> המדינה <b>ניטרלית</b> כלפי הדת, אין דת רשמית, והדת היא <b>עניין פרטי</b> של הפרט. ההבדל המרכזי: בישראל הדת <b>מעורבת</b> בחיים הציבוריים ובחקיקה, בעוד בדגם ההפרדה היא מופרדת מהם.</div>
-    </details>
-    <details><summary>הסבירו את ההבדל בין "חופש דת" ל"חופש מדת", ותנו דוגמה למתח ביניהם. <span class="freq hi">חוזרת מאוד</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> חופש דת = הזכות לקיים דת; חופש מדת = הזכות לא לקיים. מתח לדוגמה: תחבורה בשבת.</p><b>תשובה:</b>
-      <br><b>חופש דת:</b> זכותו של אדם <b>לקיים</b> את מצוות דתו ואורח חייו הדתי בחופשיות.
-      <br><b>חופש מדת:</b> זכותו של אדם <b>שלא</b> לקיים אורח חיים דתי ולא להיות כפוף לכפייה דתית.
-      <br><b>דוגמה למתח:</b> סגירת התחבורה הציבורית בשבת מכבדת את <b>חופש הדת</b> של שומרי המסורת, אך פוגעת ב<b>חופש מדת</b> של מי שאינו דתי ונזקק לתחבורה — ביטוי למתח בין מדינה יהודית למדינה דמוקרטית.</div>
-    </details>
-    <details><summary>מהו "הסטטוס קוו" בענייני דת ומדינה? ציינו שניים מן התחומים שהוא חל עליהם. <span class="freq mid">חוזרת</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> הסכמה לשמר את מצב הדת הקיים (מכתב בן-גוריון 1947); תחומים: שבת, כשרות, נישואין, חינוך (שכנ"ח).</p><b>תשובה:</b>
-      <br><b>מהו:</b> "סטטוס קוו" הוא הסכמה פוליטית ל<b>שמר את מצב הדת הקיים</b> ולא לשנותו באופן חד-צדדי, שמקורה במכתב של בן-גוריון לאגודת ישראל ערב הקמת המדינה (1947). מטרתו: לשמור על שלום בית בין הציבור הדתי לחילוני.
-      <br><b>תחומים (שניים):</b> <b>שבת</b> כיום מנוחה רשמי, ו<b>נישואין וגירושין</b> המתנהלים דרך הממסד הדתי. (גם: כשרות וחינוך.)</div>
-    </details>
-    <a class="top" href="#">↑ חזרה לראש העמוד</a>
-  </section>
-
-  <!-- ===================== ערבים ודרוזים ===================== -->
-  <section id="ec3" class="ch">
-    <h2>🤝 שאלון 034372 · פרק ב — החברה הערבית והדרוזית</h2>
-
-    <h3>מי הם? הרכב החברה הערבית בישראל <span class="chip">מושג יסוד</span></h3>
-    <figure class="fig">
-      <svg viewBox="0 0 700 130" width="100%" style="max-width:680px" role="img" aria-label="הרכב החברה הערבית">
-        <text x="350" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#e65100">ערביי ישראל ≈ 21% מהאוכלוסייה (כל אזרח חמישי)</text>
-        <g font-size="12.5" text-anchor="middle">
-          <rect x="40"  y="45" width="150" height="55" rx="10" fill="#fff0e2" stroke="#ffb074"/><text x="115" y="70" font-weight="700">מוסלמים</text><text x="115" y="90" font-size="11">הרוב הגדול</text>
-          <rect x="205" y="45" width="150" height="55" rx="10" fill="#fff0e2" stroke="#ffb074"/><text x="280" y="70" font-weight="700">נוצרים</text><text x="280" y="90" font-size="11">מיעוט</text>
-          <rect x="370" y="45" width="150" height="55" rx="10" fill="#fff0e2" stroke="#ffb074"/><text x="445" y="70" font-weight="700">דרוזים</text><text x="445" y="90" font-size="11">משרתים בצה"ל</text>
-          <rect x="535" y="45" width="150" height="55" rx="10" fill="#fff0e2" stroke="#ffb074"/><text x="610" y="70" font-weight="700">בדואים</text><text x="610" y="90" font-size="11">בנגב ובצפון</text>
-        </g>
-      </svg>
-      <figcaption>החברה הערבית אינה הומוגנית — מורכבת מכמה קבוצות דת ותרבות</figcaption>
-    </figure>
-    <div class="mnem"><b>הרכב החברה הערבית — "מנד"ב":</b> <b>מ</b>וסלמים · <b>נ</b>וצרים · <b>ד</b>רוזים · <b>ב</b>דואים (וגם צ'רקסים).</div>
-    <details class="more"><summary>פירוט הקבוצות (מוסלמים · נוצרים · בדואים · צ'רקסים)</summary>
-      <div class="ans"><b>מוסלמים</b> — הרוב הגדול. <b>נוצרים</b> — מיעוט, בעיקר בצפון, רמת השכלה גבוהה יחסית. <b>בדואים</b> — מוסלמים בעלי אורח חיים מסורתי, בנגב ובגליל; חלקם מתנדבים לצה"ל. <b>צ'רקסים</b> — קבוצה קטנה (מוסלמים לא-ערבים) המשרתת בצה"ל.</div>
-    </details>
-    <details class="more"><summary>המסגרת הרשמית לניתוח מיעוטים (לפי הסילבוס)</summary>
-      <div class="ans"><b>אופי המיעוט:</b> לאומי / דתי / אתני (ערביי ישראל = מיעוט <b>לאומי</b>; הדרוזים = עדה <b>דתית</b>).
-      <br><b>היבט מוסדי:</b> למיעוטים מוסדות נפרדים בעלי מעמד רשמי — <b>חינוך, מוסדות דת ובתי דין</b>.
-      <br><b>יחסי רוב-מיעוט:</b> זכויות המיעוט פועלות כ<b>בָּלָם</b> על שלטון הרוב; מבחינים בין <b>זכויות הפרט</b> ל<b>זכויות קבוצה</b>.
-      <br><b>"מדינת כל אזרחיה":</b> עמדה הגורסת שהמדינה צריכה להיות של כלל אזרחיה ללא אופי לאומי יהודי — סוגיה מרכזית בשיח על מעמד הערבים.</div>
-    </details>
-
-    <h3>מאפיינים ומושגים מרכזיים</h3>
-    <ul>
-      <li><b>מיעוט לאומי:</b> ערביי ישראל הם <b>מיעוט לאומי</b> (ולא רק דתי) — קבוצה בעלת זהות לאומית ערבית/פלסטינית, בתוך מדינה שרובה יהודי.</li>
-      <li><b>שאלת הזהות:</b> זהות <b>מורכבת</b> — ישראלית (אזרחות), ערבית (תרבות ולאום) ופלסטינית. המתח בין מרכיבי הזהות הוא נושא מרכזי.</li>
-      <li><b>פערים ושילוב:</b> פערים בתעסוקה, השכלה, הכנסה ותשתיות מול החברה היהודית. בעשור האחרון יש <b>מגמת שילוב</b> גוברת בשוק העבודה ובהשכלה הגבוהה.</li>
-      <li><b>שוויון מול אפליה:</b> מתח בין ה<b>שוויון האזרחי</b> המובטח בחוק לבין <b>אפליה</b> בפועל בחלוקת משאבים.</li>
-    </ul>
-
-    <h3>הדרוזים — מקרה ייחודי</h3>
-    <ul>
-      <li>עדה דתית-תרבותית נפרדת; רובם רואים עצמם <b>ישראלים</b> ו<b>משרתים בצה"ל</b> (מאז 1956, מכוח "ברית הדמים"/"ברית הגורל").</li>
-      <li>למרות זאת חווים <b>פערים</b> כלכליים ותחושת קיפוח (שהתעצמה סביב <b>חוק הלאום</b>).</li>
-    </ul>
-    <details class="more"><summary>חוק הלאום (2018) וההשפעה על המיעוטים</summary>
-      <div class="ans"><b>חוק יסוד: ישראל — מדינת הלאום של העם היהודי</b> (2018) עיגן את אופייה היהודי של המדינה. <b>הביקורת:</b> שהוא פוגע בתחושת השוויון של המיעוטים — בייחוד ה<b>דרוזים</b>, שחשו שמעמדם נפגע למרות שירותם בצה"ל.</div>
-    </details>
-
-    <h3 class="qa-h">שאלות סבירות + תשובות לדוגמה</h3>
-    <details><summary>הסבירו מדוע ערביי ישראל מוגדרים "מיעוט לאומי", והציגו אתגר אחד הנובע מכך. <span class="freq hi">חוזרת מאוד</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> מיעוט לאומי = קבוצה בעלת זהות לאומית נפרדת (ערבית/פלסטינית) במדינה יהודית; האתגר = מתח בין זהות לאומית לאזרחות ישראלית.</p><b>תשובה:</b>
-      <br><b>למה "מיעוט לאומי":</b> בניגוד למיעוט דתי בלבד, ערביי ישראל חולקים <b>זהות לאומית משלהם</b> — שפה (ערבית), תרבות, היסטוריה ושייכות לעם הערבי/הפלסטיני — בתוך מדינת לאום יהודית.
-      <br><b>אתגר:</b> נוצר <b>מתח בין הזהות הלאומית הערבית-פלסטינית לבין האזרחות הישראלית</b> — שאלת ההזדהות עם המדינה, סמליה ואופייה היהודי, לצד הרצון בשוויון אזרחי מלא.</div>
-    </details>
-    <details><summary>הציגו אתגר אחד בשילוב החברה הערבית בשוק העבודה, והסבירו דרך אחת לקדם שילוב. <span class="freq hi">חוזרת מאוד</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> אתגר = ריכוז במקצועות שכר-נמוך ופערי השכלה/תשתית; קידום = השקעה בהשכלה, הכשרה ותשתיות.</p><b>תשובה:</b>
-      <br><b>אתגר:</b> ריכוז יחסי של עובדים ערבים ב<b>מקצועות בשכר נמוך</b> (חקלאות, בניין, סיעוד) ופערים בהשכלה הגבוהה ובנגישות לתשתיות ולמרכזי תעסוקה.
-      <br><b>דרך לקידום:</b> <b>השקעה ממשלתית בהשכלה ובהכשרה מקצועית</b> בחברה הערבית, יחד עם פיתוח תשתיות ותחבורה ועידוד מעסיקים — כדי לפתוח גישה למקצועות בשכר גבוה ולצמצם את הפער.</div>
-    </details>
-    <details><summary>מהי ייחודיות מעמדם של הדרוזים בישראל ביחס לשאר ערביי ישראל? <span class="freq mid">חוזרת</span></summary>
-      <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> הדרוזים = עדה נפרדת, רואים עצמם ישראלים ומשרתים בצה"ל ("ברית הדמים") — אך עדיין חווים פערים.</p><b>תשובה:</b>
-      <br>הדרוזים הם <b>עדה דתית-תרבותית נפרדת</b>. בשונה מרוב ערביי ישראל, רובם מזדהים כ<b>ישראלים</b> ו<b>משרתים בצה"ל</b> (שירות חובה מאז 1956, מכוח "ברית הגורל/הדמים"). עם זאת, גם הדרוזים חווים <b>פערים כלכליים ותחושת קיפוח</b> — תחושה שהתחזקה בעקבות חוק הלאום, שלטענתם פגע בשוויון מעמדם.</div>
-    </details>
-    <a class="top" href="#">↑ חזרה לראש העמוד</a>
-  </section>
-
-  <!-- ===================== EXAM TECHNIQUE ===================== -->
-  <section id="exam">
-    <h2 style="color:var(--tip)">✍️ טכניקת מענה — איך מרוויחים נקודות באזרחות</h2>
-    <table class="verbs">
-      <tr><th>הפועל בשאלה</th><th>מה לעשות</th></tr>
-      <tr><td>הציגו / ציינו</td><td>מושג/עובדה בקצרה ובדיוק (הגדרה נכונה = נקודות).</td></tr>
-      <tr><td>הסבירו</td><td>מושג <b>+ פיתוח</b>: כיצד / מדוע / מה ההשלכה.</td></tr>
-      <tr><td>בססו על הקטע</td><td>חובה <b>לצטט או להפנות</b> לשורה/רעיון בקטע — לקשר בין המושג שלמדתם לבין המקור.</td></tr>
-      <tr><td>הביעו עמדה / נמקו</td><td>עמדה ברורה <b>+ שני נימוקים</b> אזרחיים (לא רגשיים). אפשר להציג גם עמדה נגדית.</td></tr>
+    <table>
+      <tr><th>דגם</th><th>עיקרון</th><th>דוגמה</th></tr>
+      <tr><td><b>תיאוקרטיה</b></td><td>החוק הדתי = חוק המדינה; הריבונות דתית; אין חופש דת/מדת</td><td>איראן (חומייני)</td></tr>
+      <tr><td><b>כנסייה רשמית</b></td><td>דת אחת מקבלת מעמד רשמי ועדיפות; ראש המדינה ראש הכנסייה</td><td>אנגליה</td></tr>
+      <tr><td><b>כנסייה נתמכת</b></td><td>המדינה תומכת בדת אך פחות מכנסייה רשמית</td><td>—</td></tr>
+      <tr><td><b>עדות מוכרות</b></td><td>המדינה ניטרלית, מכירה במספר עדות שוות בפני החוק, מממנת שירותי דת</td><td>בלגיה, אוסטריה · <b>ישראל</b></td></tr>
+      <tr><td><b>הפרדה</b></td><td>המדינה חילונית-ניטרלית; הדת עניין פרטי; החוק חילוני</td><td>ארה"ב</td></tr>
+      <tr><td><b>חילוניות אבסולוטית</b></td><td>המדינה <b>עוינת</b> את הדת; איסור על חיים דתיים</td><td>ברה"מ לשעבר</td></tr>
     </table>
+    <details class="more"><summary>"הדגם הישראלי" — למה הוא ייחודי?</summary>
+      <div class="ans">ישראל <b>אינה מפרידה</b> דת ומדינה ו<b>אינה תיאוקרטיה</b>. היא קרובה לדגם <b>"העדות המוכרות"</b>: מכירה במספר עדות דתיות ומעניקה להן סמכויות (למשל בענייני נישואין), מממנת שירותי דת, אך אינה מדינת הלכה. ההסדרים נשענים על הסכמות פוליטיות ("סטטוס קוו").</div></details>
+
+    <h3>הוויכוח על הפרדת דת ומדינה</h3>
     <ul>
-      <li><b>השתמשו במושגי האזרחות</b> המדויקים (סטטוס קוו, מיעוט לאומי, תשלומי העברה...) — בודק מחפש אותם.</li>
-      <li>שאלת קטע: זהו תחילה <b>איזו גישה/מושג</b> מסתתר בקטע, ואז קשרו לחומר שלמדתם.</li>
-      <li>חלקו זמן לפי הנקודות; שאלת חובה (18–20 נק') מקבלת יותר זמן.</li>
+      <li><b>גישה מצמצמת (בעד הפרדה):</b> לצמצם את מעורבות הדת ולבטל את מעמדם הממלכתי של מוסדות הדת — לחיזוק הדמוקרטיה וחופש הפרט.</li>
+      <li><b>גישה מרחיבה (נגד הפרדה):</b> לשמר ולחזק את מקום הדת במרחב הציבורי כחלק מזהות המדינה כיהודית.</li>
     </ul>
-    <a class="top" href="#">↑ חזרה לראש העמוד</a>
+
+    <h3>יהדות ודמוקרטיה · חופש דת ומדת <span class="chip">פרק 2</span></h3>
+    <ul>
+      <li><b>המתח המרכזי:</b> בין ערכי המדינה כ<b>יהודית</b> (אופי יהודי, חוקי דת) לערכיה כ<b>דמוקרטית</b> (חופש ושוויון). יש גישות הרואות ביניהן הרמוניה ויש הרואות ניגוד; קצה אחד = <b>"חזון מדינת התורה"</b> (מדינת הלכה).</li>
+      <li><b>חופש דת</b> = הזכות <b>לקיים</b> אורח חיים דתי. <b>חופש מדת</b> = הזכות <b>לא</b> לקיים ולהשתחרר מכפייה דתית. השניים מתנגשים (למשל תחבורה בשבת).</li>
+      <li><b>הדת האזרחית הישראלית:</b> שילוב סמלים יהודיים-מסורתיים בחיים הלאומיים (השבעת חיילים בכותל, טקסי יום הזיכרון) — גם לחילונים.</li>
+    </ul>
+
+    <div class="shaar">שער ב — החברה היהודית בישראל: שאלה של זהות</div>
+    <h3>חמש קבוצות הזהות <span class="chip">חוזר מאוד</span></h3>
+    <table>
+      <tr><th>קבוצה</th><th>זהות ויחס לדת ולמדינה</th></tr>
+      <tr><td><b>חילוני</b></td><td>השקפה הומניסטית, האדם ריבון על עצמו; ללא מחויבות להלכה; מנהגים מסורתיים מבחירה. דורש חופש מדת.</td></tr>
+      <tr><td><b>מסורתי</b></td><td>שמירה חלקית/סלקטיבית על מצוות (חגים, שבת, כשרות ברמות שונות); זיקה חמה לדת ולמסורת בלי מחויבות מלאה.</td></tr>
+      <tr><td><b>דתי-לאומי</b></td><td>שמירת תורה ומצוות <b>+</b> הזדהות חיובית עם המדינה והציונות (ערך דתי ביוזמה האנושית לגאולה). "תורה ועבודה".</td></tr>
+      <tr><td><b>חרדי</b></td><td>מחויבות מלאה להלכה ולמרות הרבנים; הסתייגות היסטורית מהציונות החילונית; הסתגרות יחסית.</td></tr>
+      <tr><td><b>רפורמי/קונסרבטיבי</b></td><td>זרמים לא-אורתודוקסיים (מרכזם בארה"ב); פרשנות מתחדשת להלכה ושוויון מגדרי; נאבקים להכרה רשמית בישראל.</td></tr>
+    </table>
+    <div class="mnem"><b>על הציר (חילון→דתיות):</b> חילוני → מסורתי → דתי-לאומי → חרדי · ובנפרד הזרמים הרפורמי/קונסרבטיבי.</div>
+
+    <div class="shaar">שער ג — דת ומדינה במערכת הפוליטית</div>
+    <h3>המפלגות הדתיות</h3>
+    <ul>
+      <li><b>מפד"ל</b> — המפלגה הדתית-לאומית (ציבור דתי-לאומי).</li>
+      <li><b>אגודת ישראל (אגו"י)</b> — חרדים אשכנזים.</li>
+      <li><b>ש"ס</b> — התאחדות הספרדים שומרי תורה (חרדים ומסורתיים ספרדים).</li>
+      <li><b>הוויכוח "האם צריך מפלגות דתיות?"</b> — בעד: ייצוג אינטרסים וזהות; נגד: עירוב דת בפוליטיקה ופגיעה באחדות.</li>
+    </ul>
+
+    <div class="shaar">שער ד — ייצוג הדת בחוק, במשפט ובמוסדות</div>
+    <ul>
+      <li><b>סוגיית החוקה:</b> לישראל אין חוקה שלמה — בין השאר בשל המחלוקת דת-מדינה; במקומה <b>חוקי יסוד</b>.</li>
+      <li><b>המשפט העברי:</b> ויכוח עד כמה לשלב את ההלכה בחקיקה ובפסיקה (חוק יסודות המשפט, 1980).</li>
+      <li><b>חקיקה דתית:</b> חוקים בעלי אופי דתי — חוק איסור גידול חזיר, חוק חג המצות (חמץ).</li>
+      <li><b>מוסדות הדת:</b> <b>הרבנות הראשית</b> (הגוף הדתי העליון), <b>בתי הדין הרבניים</b> (סמכות בנישואין/גירושין), <b>המועצות הדתיות</b> (שירותי דת מקומיים).</li>
+    </ul>
+
+    <div class="shaar">שער ה — לחיות עם המחלוקת</div>
+    <h3>הסטטוס קוו וסוגיות המחלוקת <span class="chip">חוזר מאוד</span></h3>
+    <ul>
+      <li><b>סטטוס קוו</b> — הסכמה לשמר את מצב הדת הקיים (מקורו במכתב בן-גוריון, 1947), כדי למנוע מלחמת תרבות. תחומים: <b>שבת, כשרות, נישואין/גירושין, חינוך</b>.</li>
+    </ul>
+    <div class="mnem"><b>הסטטוס קוו — "שכנ"ח":</b> <b>ש</b>בת · <b>כ</b>שרות · <b>נ</b>ישואין/גירושין · <b>ח</b>ינוך.</div>
+    <table>
+      <tr><th>סוגיה</th><th>המחלוקת</th></tr>
+      <tr><td><b>שבת</b></td><td>עבודה, תחבורה ציבורית, פתיחת עסקים — חופש דת מול חופש מדת ופרנסה.</td></tr>
+      <tr><td><b>גיוס בני ישיבות</b></td><td>פטור לומדי תורה מול שוויון בנטל; <b>ועדת טל</b> ניסתה להסדיר.</td></tr>
+      <tr><td><b>מיהו יהודי</b></td><td>הגדרת יהדות לחוק השבות; מחלוקת על <b>הגיור</b> (אורתודוקסי מול רפורמי/קונסרבטיבי).</td></tr>
+      <tr><td><b>נישואין אזרחיים</b></td><td>נישואין רק דרך הרבנות → פגיעה במי שאינו יכול/רוצה; ויכוח על נישואין אזרחיים.</td></tr>
+      <tr><td><b>יחסי דתיים-חילונים</b></td><td>כיצד "לחיות יחד" — סובלנות, פשרה והכרעה בכלים דמוקרטיים.</td></tr>
+    </table>
+
+    <h3 class="qa-h">שאלות סבירות + תשובות</h3>
+    <details><summary>הציגו את הדגם הישראלי ליחסי דת-מדינה והשוו לדגם ההפרדה. <span class="freq hi">חוזרת מאוד</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> ישראלי = "עדות מוכרות", לא מפריד ולא תיאוקרטי, סטטוס קוו; הפרדה = מדינה ניטרלית, דת פרטית.</p>
+      <b>הדגם הישראלי:</b> ישראל אינה מפרידה דת ומדינה ואינה תיאוקרטיה — היא קרובה לדגם <b>"העדות המוכרות"</b>: מכירה בעדות דתיות, מעניקה להן סמכויות (נישואין/גירושין דרך הרבנות), מממנת שירותי דת, ושבת היא יום מנוחה רשמי. <b>בדגם ההפרדה</b> המדינה ניטרלית, אין דת רשמית והדת היא עניין פרטי. ההבדל: בישראל הדת <b>מעורבת</b> בחקיקה ובחיים הציבוריים.</div></details>
+    <details><summary>הסבירו את ההבדל בין "חופש דת" ל"חופש מדת" עם דוגמה למתח. <span class="freq hi">חוזרת מאוד</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> חופש דת = לקיים; חופש מדת = לא לקיים. מתח: תחבורה בשבת.</p>
+      <b>חופש דת</b> = הזכות לקיים מצוות ואורח חיים דתי. <b>חופש מדת</b> = הזכות שלא לקיים ולא להיכפות. <b>דוגמה:</b> סגירת תחבורה ציבורית בשבת מכבדת את חופש הדת של שומרי המסורת אך פוגעת בחופש מדת של מי שזקוק לתחבורה — ביטוי למתח יהודית-דמוקרטית.</div></details>
+    <details><summary>מהו הסטטוס קוו, ומדוע הוא שנוי במחלוקת? <span class="freq mid">חוזרת</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> הסכמה לשמר את מצב הדת (בן-גוריון 1947); תחומים שכנ"ח; שברירי כי אינו חוק.</p>
+      <b>סטטוס קוו</b> הוא הסכמה פוליטית לשמר את מצב הדת הקיים (שבת, כשרות, נישואין, חינוך), שמקורה במכתב בן-גוריון לאגודת ישראל ערב הקמת המדינה. הוא <b>אינו חוק</b> אלא הסדר עדין, ולכן מתערער שוב ושוב סביב שינויים חברתיים (פתיחת עסקים בשבת, גיוס).</div></details>
+    <details><summary>הציגו שתי קבוצות זהות בחברה היהודית והסבירו את יחסן למדינה. <span class="freq mid">חוזרת</span></summary>
+      <div class="ans"><p class="quick"><b>⚡ תזכורת:</b> דתי-לאומי = תורה + הזדהות עם המדינה; חרדי = הלכה מלאה + הסתייגות היסטורית מהציונות.</p>
+      <b>הדתי-לאומי</b> משלב שמירת תורה ומצוות עם <b>הזדהות חיובית</b> עם המדינה והציונות, ורואה ערך דתי בבניין הארץ. <b>החרדי</b> מחויב מלאות להלכה ולמרות הרבנים, ומתאפיין ב<b>הסתייגות היסטורית</b> מהציונות החילונית, אם כי משתלב פוליטית לשם הגנת אינטרסים.</div></details>
+    <a class="top" href="#">↑ לראש העמוד</a>
   </section>
 
-  <!-- ===================== CHECKLIST ===================== -->
+  <!-- =================== EXAM TECHNIQUE =================== -->
+  <section id="exam">
+    <h2 style="color:var(--tip)">✍️ טכניקת מענה</h2>
+    <table class="verbs">
+      <tr><th>הפועל</th><th>מה לעשות</th></tr>
+      <tr><td>הציגו / ציינו</td><td>מושג/עובדה בקצרה ובדיוק.</td></tr>
+      <tr><td>הסבירו</td><td>מושג <b>+ פיתוח</b> (מדוע/כיצד/השלכה).</td></tr>
+      <tr><td>בססו על הקטע</td><td>חובה <b>לצטט/להפנות</b> לקטע ולקשר למושג שלמדתם.</td></tr>
+      <tr><td>הביעו עמדה / נמקו</td><td>עמדה ברורה <b>+ שני נימוקים אזרחיים</b> (לא רגשיים).</td></tr>
+    </table>
+    <ul><li>השתמשו ב<b>מושגי האזרחות המדויקים</b> (סטטוס קוו, חופש מדת, עדות מוכרות, תשלומי העברה…) — הבודק מחפש אותם.</li>
+    <li>בשאלת קטע: זהו תחילה איזה <b>מושג/גישה/דגם</b> מסתתר בקטע, ואז קשרו לחומר.</li></ul>
+    <a class="top" href="#">↑ לראש העמוד</a>
+  </section>
+
+  <!-- =================== CHECKLIST =================== -->
   <section id="check">
-    <h2 style="color:var(--tip)">✅ צ׳ק־ליסט אחרון</h2>
+    <h2 style="color:var(--tip)">✅ צ׳ק־ליסט</h2>
     <table>
       <tr><th>נושא</th><th>אני יודע/ת להסביר…</th></tr>
-      <tr><td>רווחה וכלכלה (034371)</td><td>ליברלית מול סוציאל-דמוקרטית · כלי הרווחה (מת"ש) · עוני ואי-שוויון · יתרונות/חסרונות גלובליזציה</td></tr>
-      <tr><td>דת ומדינה</td><td>3 הדגמים (הפרדה/תאוקרטיה/ישראלי) · סטטוס קוו (שכנ"ח) · חופש דת מול חופש מדת · מתח יהודית-דמוקרטית</td></tr>
-      <tr><td>החברה הערבית והדרוזית</td><td>הרכב (מנד"ב) · מיעוט לאומי · זהות מורכבת · שילוב בתעסוקה · ייחודיות הדרוזים</td></tr>
+      <tr><td>רווחה (034371)</td><td>ליברלית מול סוציאל-דמוקרטית (חירות↔שוויון) · מת"ש · עוני יחסי · הפרטה · גלובליזציה</td></tr>
+      <tr><td>דת-מדינה: שער א</td><td>6 הדגמים + הדגם הישראלי (עדות מוכרות) · הפרדה (מרחיבה/מצמצמת) · חופש דת↔מדת · יהדות-דמוקרטיה</td></tr>
+      <tr><td>שער ב</td><td>5 קבוצות הזהות ויחסן לדת ולמדינה</td></tr>
+      <tr><td>שער ג-ד</td><td>מפד"ל/אגו"י/ש"ס · חוקה · חקיקה דתית · רבנות ובתי דין</td></tr>
+      <tr><td>שער ה</td><td>סטטוס קוו (שכנ"ח) · שבת · גיוס/ועדת טל · מיהו יהודי/גיור · נישואין אזרחיים</td></tr>
     </table>
-    <div class="callout"><b>שימו לב:</b> ודאו מול המורה <b>איזה נושא בחירה</b> למדתם בשאלון 034372 (דת-מדינה ו/או ערבים-דרוזים) — בשנים האחרונות הבחינה כללה את <b>שני</b> הפרקים, אז הדף מכסה את שניהם.</div>
-    <a class="top" href="#">↑ חזרה לראש העמוד</a>
+    <a class="top" href="#">↑ לראש העמוד</a>
   </section>
 </main>
 
 <script>
 (function(){
-  var body=document.body;
-  // ---- detail mode (quick / medium / full) ----
-  var MKEY='civics-mode-v1';
+  var body=document.body, MKEY='civics2-mode-v1';
   function applyMode(m){
     body.classList.remove('mode-quick','mode-medium','mode-full');
     body.classList.add('mode-'+m);
-    document.querySelectorAll('.seg-mode button').forEach(function(b){
-      b.setAttribute('aria-pressed', b.dataset.mode===m?'true':'false');
-    });
+    document.querySelectorAll('.seg-mode button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===m?'true':'false');});
   }
-  var mode='full'; try{ mode=localStorage.getItem(MKEY)||'full'; }catch(e){}
+  var mode='full'; try{mode=localStorage.getItem(MKEY)||'full';}catch(e){}
   applyMode(mode);
+  var note=document.getElementById('savedNote'),t;
   document.querySelectorAll('.seg-mode button').forEach(function(b){
-    b.addEventListener('click',function(){ var m=b.dataset.mode; try{localStorage.setItem(MKEY,m);}catch(e){} applyMode(m); flash(); });
+    b.addEventListener('click',function(){var m=b.dataset.mode;try{localStorage.setItem(MKEY,m);}catch(e){}applyMode(m);
+      if(note){note.textContent='✓ נשמר';clearTimeout(t);t=setTimeout(function(){note.textContent='הבחירה נשמרת אוטומטית · "מלא" כולל את ההרחבות 💡';},1500);}});
   });
-  // ---- elective (034372): דת / ערבים ודרוזים / שניהם ----
-  var EKEY='civics-elective-v1';
-  var secDat=document.getElementById('ec2'), secArab=document.getElementById('ec3');
-  var navDat=document.querySelector('nav a[href="#ec2"]'), navArab=document.querySelector('nav a[href="#ec3"]');
-  function applyElective(c){
-    var sd=(c==='dat'||c==='both'), sa=(c==='arab'||c==='both');
-    if(secDat) secDat.classList.toggle('hidden-elective',!sd);
-    if(secArab) secArab.classList.toggle('hidden-elective',!sa);
-    if(navDat) navDat.classList.toggle('hidden-elective',!sd);
-    if(navArab) navArab.classList.toggle('hidden-elective',!sa);
-    document.querySelectorAll('.seg-elective button').forEach(function(b){
-      b.setAttribute('aria-pressed', b.dataset.choice===c?'true':'false');
-    });
-  }
-  var el='both'; try{ el=localStorage.getItem(EKEY)||'both'; }catch(e){}
-  applyElective(el);
-  document.querySelectorAll('.seg-elective button').forEach(function(b){
-    b.addEventListener('click',function(){ var c=b.dataset.choice; try{localStorage.setItem(EKEY,c);}catch(e){} applyElective(c); flash(); });
-  });
-  // ---- "saved" flash ----
-  var note=document.getElementById('savedNote'), t;
-  function flash(){ if(!note) return; note.textContent='✓ נשמר'; clearTimeout(t);
-    t=setTimeout(function(){ note.textContent='הבחירות נשמרות אוטומטית במכשיר שלך'; },1500); }
 })();
 </script>
 
 <footer>
-  עזר חזרה אישי · מבוסס על ניתוח שאלוני הבגרות הרשמיים (034371 + 034372, 2021–2025) ועל <b>תכנית הלימודים הרשמית (הלימה)</b> של משרד החינוך.<br>
-  אינו תחליף לספרי הלימוד ולהנחיות המורה. בהצלחה! 🍀
+  עזר חזרה אישי · מבוסס על ספר הלימוד "דת חברה ומדינה בישראל", המיקוד הרשמי תשפ"ו, ושאלוני 2021–2025.<br>
+  אינו תחליף לספר הלימוד ולהנחיות המורה. בהצלחה! 🍀
 </footer>
 </body>
 </html>
