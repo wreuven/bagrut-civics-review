@@ -61,6 +61,36 @@
   .hi{background:#ffe0e0;color:#c0392b} .mid{background:#fff3cd;color:#8a6d00}
   .callout{background:#fff8e1;border:1px solid #ffe082;border-radius:12px;padding:12px 16px;margin:14px 0}
   .verbs td:first-child{font-weight:700;white-space:nowrap}
+  /* elective chooser */
+  .elective{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:18px 0;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);text-align:center}
+  .elective b{display:block;margin-bottom:10px;color:var(--muted);font-size:.92rem}
+  .seg{display:inline-flex;flex-wrap:wrap;gap:6px;justify-content:center}
+  .seg button{font-family:inherit;font-size:.95rem;font-weight:700;cursor:pointer;border:2px solid var(--e3);
+    background:#fff;color:var(--e3);border-radius:10px;padding:8px 16px;transition:.15s}
+  .seg button[aria-pressed="true"]{background:var(--e3);color:#fff}
+  .seg button:hover{filter:brightness(.97)}
+  .saved-note{font-size:.82rem;color:var(--muted);margin-top:8px;min-height:1em}
+  .hidden-elective{display:none !important}
+  /* clickable info expansions */
+  details.more{background:#f1f7ff;border:1px solid #cfe0f5;border-radius:10px;margin:8px 0 12px;padding:0 14px}
+  details.more summary{color:#1565c0;padding:11px 4px}
+  details.more summary::before{content:"💡 הרחבה";background:#dceafe;color:#1565c0}
+  details.more[open]{box-shadow:0 1px 5px rgba(21,101,192,.12)}
+  details.more .ans{border-top:1px dashed #cfe0f5}
+  /* controls bar */
+  .controls{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:18px 0;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);position:sticky;top:0;z-index:20}
+  .ctl-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin:6px 0}
+  .ctl-label{font-weight:700;color:var(--muted);font-size:.92rem}
+  .seg-mode button{border-color:var(--tip);color:var(--tip)}
+  .seg-mode button[aria-pressed="true"]{background:var(--tip);color:#fff}
+  .saved-note{font-size:.82rem;color:#2e7d32;text-align:center;margin-top:6px;min-height:1.1em}
+  /* detail modes */
+  details.more{display:none}                      /* expansions: full only */
+  body.mode-full details.more{display:block}
+  body.mode-quick details:not(.more){display:none}/* Q&A: hidden in quick */
+  body.mode-quick .qa-h{display:none}
   footer{text-align:center;color:var(--muted);font-size:.85rem;padding:26px 16px 50px}
   .top{display:block;text-align:center;margin:8px 0;color:var(--muted);text-decoration:none;font-size:.85rem}
   svg text{font-family:"Segoe UI","Arial Hebrew",Arial,sans-serif}
@@ -88,6 +118,26 @@
     <b>📖 איך ללמוד מהדף:</b> קראו תחילה את ה<b>הסברים המלאים</b> בכל נושא (משפטים שלמים שמסבירים כל מושג).
     השורה ה<b style="color:#00695c">תכולה ("⚡ תזכורת מהירה")</b> וראשי-התיבות הם <b>תזכורות לחזרה</b> אחרי שהבנתם.
     לחיצה על <b>שאלה</b> פותחת תשובה מלאה. שימו לב לפועל בשאלה: <span class="key">הציגו</span>=עובדה · <span class="key">הסבירו</span>=נימוק+פיתוח · <span class="key">בססו על הקטע</span>=הפניה למקור.
+  </div>
+
+  <div class="controls">
+    <div class="ctl-row">
+      <span class="ctl-label">📏 רמת פירוט:</span>
+      <div class="seg seg-mode">
+        <button data-mode="quick">סקירה מהירה</button>
+        <button data-mode="medium">בינוני</button>
+        <button data-mode="full">מלא</button>
+      </div>
+    </div>
+    <div class="ctl-row">
+      <span class="ctl-label">🎯 נושא הבחירה (034372):</span>
+      <div class="seg seg-elective">
+        <button data-choice="dat">דת, חברה ומדינה</button>
+        <button data-choice="arab">ערבים ודרוזים</button>
+        <button data-choice="both">שניהם</button>
+      </div>
+    </div>
+    <div class="saved-note" id="savedNote">הבחירות נשמרות אוטומטית במכשיר שלך</div>
   </div>
 
   <nav>
@@ -132,6 +182,11 @@
       </svg>
       <figcaption>כל שאלה כמעט תדרוש לזהות לאיזו גישה משתייכת עמדה/קטע — וזה הציר</figcaption>
     </figure>
+    <details class="more"><summary>דוגמאות למדינות — ואיפה ישראל על הציר</summary>
+      <div class="ans"><b>ליברלית מובהקת:</b> ארה"ב — מסים נמוכים, מערכת רווחה מצומצמת.
+      <b>סוציאל-דמוקרטית מובהקת:</b> מדינות סקנדינביה (שוודיה, דנמרק) — מסים גבוהים ורווחה נרחבת.
+      <b>ישראל:</b> דגם <b>מעורב</b> שנע עם השנים <b>לכיוון השוק החופשי</b> (הפרטות, צמצום קצבאות), לצד מערכת רווחה משמעותית.</div>
+    </details>
 
     <h3>הכלים של מדיניות הרווחה</h3>
     <ul>
@@ -147,8 +202,15 @@
       <li><b>עוני יחסי</b> — נמדד ביחס לרמת החיים בחברה (קו העוני = אחוז מ<b>חציון</b> ההכנסה). זה המדד הנהוג בישראל.</li>
       <li><b>אי-שוויון</b> — פערים בחלוקת ההכנסות בין קבוצות. תשלומי ההעברה והמיסים הישירים <b>מורידים את שיעור העוני</b>.</li>
     </ul>
+    <details class="more"><summary>"מדד ג'יני" + ההבדל בין עוני יחסי למוחלט</summary>
+      <div class="ans"><b>מדד ג'יני</b> — מספר בין 0 ל-1 שמודד אי-שוויון בחלוקת ההכנסות: ככל שקרוב ל-1, אי-השוויון גדול יותר.
+      <b>עוני מוחלט</b> = אי-יכולת לספק צרכים בסיסיים (מזון, קורת גג). <b>עוני יחסי</b> = הכנסה נמוכה משמעותית מרוב החברה (גם אם הצרכים הבסיסיים מסופקים). ישראל מודדת עוני <b>יחסי</b>.</div>
+    </details>
 
     <h3>גלובליזציה <span class="chip">פרק שני בשאלון</span></h3>
+    <details class="more"><summary>איך הגלובליזציה "מאיימת" על מדינת הרווחה?</summary>
+      <div class="ans">כשהון וחברות עוברים בקלות בין מדינות, מדינות מתחרות על משיכת השקעות בכך שהן <b>מורידות מסים ומקטינות הגנות סוציאליות</b> ("מרוץ לתחתית") — וכך נחלשת היכולת לממן את מדינת הרווחה.</div>
+    </details>
     <figure class="fig">
       <svg viewBox="0 0 700 180" width="100%" style="max-width:680px" role="img" aria-label="גלובליזציה יתרונות וחסרונות">
         <rect x="30" y="20" width="310" height="140" rx="12" fill="#e0f2f1" stroke="#4db6ac"/>
@@ -162,7 +224,7 @@
       </svg>
     </figure>
 
-    <h3>שאלות סבירות + תשובות לדוגמה</h3>
+    <h3 class="qa-h">שאלות סבירות + תשובות לדוגמה</h3>
     <details><summary>הסבירו את ההבדל בין הגישה הליברלית לגישה הסוציאל-דמוקרטית במדיניות כלכלית-חברתית. <span class="freq hi">חוזרת מאוד</span></summary>
       <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> ליברלית = מדינה לא מתערבת, מסים נמוכים, פערים לגיטימיים; סוציאל-דמוקרטית = מדינה מעורבת, מסים גבוהים, צמצום פערים.</p><b>תשובה:</b>
       <br><b>הגישה הליברלית (שוק חופשי):</b> דוגלת ב<b>מעורבות ממשלתית מינימלית</b> בכלכלה. השוק החופשי יקבע מחירים ושכר, המסים נמוכים, ומעודדים <b>הפרטה</b>. פערים כלכליים נתפסים כתוצאה לגיטימית של תחרות ויוזמה.
@@ -210,6 +272,9 @@
       <li><b>מדינה תאוקרטית:</b> הדת <b>שולטת</b> והחוק הדתי הוא חוק המדינה (איראן).</li>
       <li><b>הדגם הישראלי:</b> ישראל <b>אינה מפרידה</b> דת ומדינה <b>ואינה תאוקרטיה</b> — דגם ביניים מורכב, מבוסס על הסכמות פוליטיות ("סטטוס קוו").</li>
     </ul>
+    <details class="more"><summary>דוגמה לכל דגם בעולם</summary>
+      <div class="ans"><b>הפרדה:</b> ארה"ב, צרפת. <b>תאוקרטיה:</b> איראן (החוק האסלאמי = חוק המדינה). <b>דת רשמית עם חופש דת:</b> בריטניה (כנסייה אנגליקנית רשמית, אך חופש דת מלא). <b>ישראל:</b> דגם ייחודי — שילוב עמוק של דת ומדינה בחקיקה ובחיים הציבוריים, בלי הפרדה ובלי שלטון דתי מלא.</div>
+    </details>
 
     <h3>הסטטוס קוו <span class="chip">מושג מפתח</span></h3>
     <ul>
@@ -217,6 +282,9 @@
       <li><b>ארבעת התחומים:</b> <b>שבת</b> (יום מנוחה רשמי), <b>כשרות</b> (במוסדות ציבוריים), <b>נישואין וגירושין</b> (דרך הממסד הדתי), <b>חינוך</b> (זרמים נפרדים).</li>
     </ul>
     <div class="mnem"><b>הסטטוס קוו — "שכנ"ח":</b> <b>ש</b>בת · <b>כ</b>שרות · <b>נ</b>ישואין וגירושין · <b>ח</b>ינוך. (כמו "שָׁכֵן" + ח')</div>
+    <details class="more"><summary>מאיפה הגיע הסטטוס קוו, ולמה הוא שברירי?</summary>
+      <div class="ans">מקורו ב<b>"מכתב הסטטוס קוו"</b> שכתב בן-גוריון (בשם הסוכנות היהודית) לאגודת ישראל ב-1947, כדי להבטיח את תמיכת הציבור הדתי בהקמת המדינה. הוא <b>אינו חוק</b> אלא הסכמה פוליטית — ולכן <b>שברירי</b> ומתערער שוב ושוב סביב שינויים חברתיים (עסקים ותחבורה בשבת, גיוס בני ישיבות).</div>
+    </details>
 
     <h3>גישות, חירויות ומתחים</h3>
     <ul>
@@ -225,7 +293,7 @@
       <li><b>המתח המרכזי:</b> בין ערכי המדינה כ<b>יהודית</b> (אופי יהודי, חוקי דת) לבין ערכיה כ<b>דמוקרטית</b> (חופש, שוויון, חופש מדת). סוגיות בולטות: נישואין אזרחיים, תחבורה ומסחר בשבת, גיוס בני ישיבות, כשרות.</li>
     </ul>
 
-    <h3>שאלות סבירות + תשובות לדוגמה</h3>
+    <h3 class="qa-h">שאלות סבירות + תשובות לדוגמה</h3>
     <details><summary>הציגו את הדגם הישראלי ליחסי דת ומדינה, והשוו אותו לדגם של הפרדת דת ומדינה. <span class="freq hi">חוזרת מאוד</span></summary>
       <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> הדגם הישראלי = לא מפריד ולא תאוקרטי, מבוסס סטטוס קוו; בהפרדה — המדינה ניטרלית והדת פרטית.</p><b>תשובה:</b>
       <br><b>הדגם הישראלי:</b> ישראל <b>אינה מפרידה</b> בין דת למדינה ו<b>אינה מדינה תאוקרטית</b>. יש שילוב בין השניים, המוסדר ב"סטטוס קוו" — לדוגמה, נישואין וגירושין של יהודים מתנהלים דרך הרבנות, שבת היא יום המנוחה הרשמי, ויש פיקוח כשרות במוסדות ציבוריים.
@@ -263,6 +331,9 @@
       <figcaption>החברה הערבית אינה הומוגנית — מורכבת מכמה קבוצות דת ותרבות</figcaption>
     </figure>
     <div class="mnem"><b>הרכב החברה הערבית — "מנד"ב":</b> <b>מ</b>וסלמים · <b>נ</b>וצרים · <b>ד</b>רוזים · <b>ב</b>דואים (וגם צ'רקסים).</div>
+    <details class="more"><summary>פירוט הקבוצות (מוסלמים · נוצרים · בדואים · צ'רקסים)</summary>
+      <div class="ans"><b>מוסלמים</b> — הרוב הגדול. <b>נוצרים</b> — מיעוט, בעיקר בצפון, רמת השכלה גבוהה יחסית. <b>בדואים</b> — מוסלמים בעלי אורח חיים מסורתי, בנגב ובגליל; חלקם מתנדבים לצה"ל. <b>צ'רקסים</b> — קבוצה קטנה (מוסלמים לא-ערבים) המשרתת בצה"ל.</div>
+    </details>
 
     <h3>מאפיינים ומושגים מרכזיים</h3>
     <ul>
@@ -277,8 +348,11 @@
       <li>עדה דתית-תרבותית נפרדת; רובם רואים עצמם <b>ישראלים</b> ו<b>משרתים בצה"ל</b> (מאז 1956, מכוח "ברית הדמים"/"ברית הגורל").</li>
       <li>למרות זאת חווים <b>פערים</b> כלכליים ותחושת קיפוח (שהתעצמה סביב <b>חוק הלאום</b>).</li>
     </ul>
+    <details class="more"><summary>חוק הלאום (2018) וההשפעה על המיעוטים</summary>
+      <div class="ans"><b>חוק יסוד: ישראל — מדינת הלאום של העם היהודי</b> (2018) עיגן את אופייה היהודי של המדינה. <b>הביקורת:</b> שהוא פוגע בתחושת השוויון של המיעוטים — בייחוד ה<b>דרוזים</b>, שחשו שמעמדם נפגע למרות שירותם בצה"ל.</div>
+    </details>
 
-    <h3>שאלות סבירות + תשובות לדוגמה</h3>
+    <h3 class="qa-h">שאלות סבירות + תשובות לדוגמה</h3>
     <details><summary>הסבירו מדוע ערביי ישראל מוגדרים "מיעוט לאומי", והציגו אתגר אחד הנובע מכך. <span class="freq hi">חוזרת מאוד</span></summary>
       <div class="ans"><p class="quick"><b>⚡ תזכורת מהירה:</b> מיעוט לאומי = קבוצה בעלת זהות לאומית נפרדת (ערבית/פלסטינית) במדינה יהודית; האתגר = מתח בין זהות לאומית לאזרחות ישראלית.</p><b>תשובה:</b>
       <br><b>למה "מיעוט לאומי":</b> בניגוד למיעוט דתי בלבד, ערביי ישראל חולקים <b>זהות לאומית משלהם</b> — שפה (ערבית), תרבות, היסטוריה ושייכות לעם הערבי/הפלסטיני — בתוך מדינת לאום יהודית.
@@ -327,6 +401,49 @@
     <a class="top" href="#">↑ חזרה לראש העמוד</a>
   </section>
 </main>
+
+<script>
+(function(){
+  var body=document.body;
+  // ---- detail mode (quick / medium / full) ----
+  var MKEY='civics-mode-v1';
+  function applyMode(m){
+    body.classList.remove('mode-quick','mode-medium','mode-full');
+    body.classList.add('mode-'+m);
+    document.querySelectorAll('.seg-mode button').forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.mode===m?'true':'false');
+    });
+  }
+  var mode='full'; try{ mode=localStorage.getItem(MKEY)||'full'; }catch(e){}
+  applyMode(mode);
+  document.querySelectorAll('.seg-mode button').forEach(function(b){
+    b.addEventListener('click',function(){ var m=b.dataset.mode; try{localStorage.setItem(MKEY,m);}catch(e){} applyMode(m); flash(); });
+  });
+  // ---- elective (034372): דת / ערבים ודרוזים / שניהם ----
+  var EKEY='civics-elective-v1';
+  var secDat=document.getElementById('ec2'), secArab=document.getElementById('ec3');
+  var navDat=document.querySelector('nav a[href="#ec2"]'), navArab=document.querySelector('nav a[href="#ec3"]');
+  function applyElective(c){
+    var sd=(c==='dat'||c==='both'), sa=(c==='arab'||c==='both');
+    if(secDat) secDat.classList.toggle('hidden-elective',!sd);
+    if(secArab) secArab.classList.toggle('hidden-elective',!sa);
+    if(navDat) navDat.classList.toggle('hidden-elective',!sd);
+    if(navArab) navArab.classList.toggle('hidden-elective',!sa);
+    document.querySelectorAll('.seg-elective button').forEach(function(b){
+      b.setAttribute('aria-pressed', b.dataset.choice===c?'true':'false');
+    });
+  }
+  var el='both'; try{ el=localStorage.getItem(EKEY)||'both'; }catch(e){}
+  applyElective(el);
+  document.querySelectorAll('.seg-elective button').forEach(function(b){
+    b.addEventListener('click',function(){ var c=b.dataset.choice; try{localStorage.setItem(EKEY,c);}catch(e){} applyElective(c); flash(); });
+  });
+  // ---- "saved" flash ----
+  var note=document.getElementById('savedNote'), t;
+  function flash(){ if(!note) return; note.textContent='✓ נשמר'; clearTimeout(t);
+    t=setTimeout(function(){ note.textContent='הבחירות נשמרות אוטומטית במכשיר שלך'; },1500); }
+})();
+</script>
 
 <footer>
   עזר חזרה אישי · מבוסס על ניתוח שאלוני הבגרות הרשמיים (034371 + 034372, 2021–2025).<br>
